@@ -1,0 +1,21 @@
+<div class="px-4 py-5 my-5 text-center">
+  <!-- <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+  <h1 class="display-5 fw-bold">{{ title }}</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Hello world!</p>
+    <p>click:{{ clicks }}</p>
+    <p *ngIf="lastBlockNumber">
+      The last block number in the blockchain is {{ lastBlockNumber }}
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button
+        type="button"
+        (click)="click(incrementValue.value)"
+        class="btn btn-danger btn-lg px-4 gap-3"
+      >
+        Click me!
+      </button>
+    </div>
+    <input #incrementValue class="form-control my-4" type="number" placeholder="0" aria-label="number input for the click button">
+  </div>
+</div>
